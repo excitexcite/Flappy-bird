@@ -10,37 +10,39 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField] GameObject pipe;
     [SerializeField] private float height;
     [SerializeField] private bool spawnPipes = true;
-
+    private Coroutine spawningCoroutine;
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    void Start()
     {
-        while (spawnPipes)
-        {
-            yield return StartCoroutine(SpawnPipes());
-        }
+
     }
 
     IEnumerator SpawnPipes()
     {
-        GameObject newPipe = Instantiate(pipe);
-        Vector3 randomFactor = new Vector3(0, Random.Range(-height, height), 0);
-        newPipe.transform.position = transform.position + randomFactor;
-        Destroy(newPipe, 5f);
-        yield return new WaitForSeconds(timeToSpawn);
+        while (spawnPipes)
+        {
+            GameObject newPipe = Instantiate(pipe);
+            Vector3 randomFactor = new Vector3(0, Random.Range(-height, height), 0);
+            newPipe.transform.position = transform.position + randomFactor;
+            Destroy(newPipe, 5f);
+            yield return new WaitForSeconds(timeToSpawn);
+        }
+    }
+
+    public void StartSpawning()
+    {
+        spawningCoroutine = StartCoroutine(SpawnPipes());
+    }
+
+    public void StopSpawning()
+    {
+        StopCoroutine(spawningCoroutine);
     }
 
     // Update is called once per frame
     void Update()
     {
-/*        if (timer > timeToSpawn)
-        {
-            GameObject newPipe = Instantiate(pipe);
-            newPipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-            Destroy(newPipe, 15f);
-        }
-        timer += Time.deltaTime;*/
+
     }
-
-
 }
