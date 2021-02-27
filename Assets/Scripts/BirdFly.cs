@@ -27,6 +27,9 @@ public class BirdFly : MonoBehaviour
             alreadyTouched = true; // pointing that first touch was made
             rigidbody2D.isKinematic = false; // enabling rigidbody gravity property
             FindObjectOfType<PipeSpawner>().StartSpawning(); // telling the spawner to star spawning pipes
+            Manager manager =  FindObjectOfType<Manager>(); // enabling the score label
+            manager.EnableScore();
+            manager.DisableStartUI();
         }
 
         if (Input.GetMouseButtonDown(0)) // if screen is touched bird flies up

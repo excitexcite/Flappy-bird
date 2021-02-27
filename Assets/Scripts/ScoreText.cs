@@ -16,7 +16,12 @@ public class ScoreText : MonoBehaviour
 
     void Update()
     {
-        FindObjectOfType<TextMeshProUGUI>().text = score.ToString();
+        var text = FindObjectOfType<TextMeshProUGUI>();
+        if (text) 
+        { 
+            text.text = score.ToString();
+        }
+
         //GetComponent<Text>().text = score.ToString();
     }
     
