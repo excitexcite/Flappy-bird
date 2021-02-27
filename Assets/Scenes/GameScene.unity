@@ -521,12 +521,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!223 &1138386108 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 9206434571552420787, guid: aa48e36cb2c3905428669128d28a104b,
-    type: 3}
-  m_PrefabInstance: {fileID: 9206434572648814351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1290666337 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6957941221486551062, guid: 18431fc56cd2c024790bb22a287597b1,
@@ -752,10 +746,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 562271344, guid: 98fa7626a29d1ff468b95fc3ec632e69, type: 3}
-      propertyPath: gameCanvas
-      value: 
-      objectReference: {fileID: 1138386108}
     - target: {fileID: 955347948102936393, guid: 98fa7626a29d1ff468b95fc3ec632e69,
         type: 3}
       propertyPath: m_LocalPosition.x

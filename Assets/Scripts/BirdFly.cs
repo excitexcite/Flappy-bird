@@ -40,9 +40,4 @@ public class BirdFly : MonoBehaviour
     {
         manager.GameOver(); // if bird touch the ground or pipes gameover
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
 }
