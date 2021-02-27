@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-
-    [SerializeField] Canvas gameCanvas; // reference to the main canvas
     private GameObject[] gameOverComponents; // array of objects that have to appear when the game is overed
 
     // Start is called before the first frame update
