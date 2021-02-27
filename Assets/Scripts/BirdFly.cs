@@ -10,6 +10,7 @@ public class BirdFly : MonoBehaviour
     [SerializeField] Manager manager; // manage object reference
     private Rigidbody2D rigidbody2D; // reference to control bird's rigit body component (velocity)
     private bool alreadyTouched = false; // bool variable that tells if the screen was touched
+    private bool gameOver = false; // bool variable that fobirds us to move when the bird is dead
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +36,18 @@ public class BirdFly : MonoBehaviour
         {
             rigidbody2D.velocity = Vector2.up * velocity;
         }
-        transform.eulerAngles = new Vector3(0, 0, rigidbody2D.velocity.y * 20f); // add some rotating while bird fly
+
+        // if the bird has to fall dawn (game over), this option helps us not to change bird direction when it is falling
+        // bird will look down
+        if (!gameOver) 
+        {
+            transform.eulerAngles = new Vector3(0, 0, rigidbody2D.velocity.y * 20f); // add some rotating while bird fly
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        gameOver = true;
         manager.GameOver(); // if bird touch the ground or pipes gameover
     }
 }
