@@ -8,12 +8,18 @@ public class Level : MonoBehaviour
 
     public void ReloadLevel()
     {
-        SceneManager.LoadScene(0); // reloading game scene
+        SceneManager.LoadScene(1); // reloading game scene
     }
 
     public void LoadMainMenu()
     {
-        // TODO // loading main scene
+        SceneManager.LoadScene(0);
+        ResumeGame();
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
 
     public void Quit()
