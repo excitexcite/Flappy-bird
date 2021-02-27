@@ -241,6 +241,12 @@ MonoBehaviour:
   velocity: 1.4
   level: {fileID: 1290666337}
   manager: {fileID: 562271344}
+  deathSound: {fileID: 8300000, guid: 9130ff9aab0aac244b07ca4657dd999e, type: 3}
+  deathSoundVolume: 0.5
+  flyUpSound: {fileID: 8300000, guid: 30589ccf0dbdeb64e95d5c1e03c2fa16, type: 3}
+  flyUpVolume: 0.3
+  wingsFlappSound: {fileID: 8300000, guid: f098a76d944776c48860f9c67aefe7e9, type: 3}
+  wingsFlappVolume: 0.2
 --- !u!50 &495388165
 Rigidbody2D:
   serializedVersion: 4

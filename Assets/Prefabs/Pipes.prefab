@@ -309,6 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a77763e6a333464781de24a452dd6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointGainSound: {fileID: 8300000, guid: a68be2b27043c634aa2e0a107c75f277, type: 3}
+  pointGainSoundVolume: 0.5
 --- !u!61 &3369735226908724954
 BoxCollider2D:
   m_ObjectHideFlags: 0

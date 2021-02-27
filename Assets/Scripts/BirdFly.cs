@@ -12,6 +12,15 @@ public class BirdFly : MonoBehaviour
     private bool alreadyTouched = false; // bool variable that tells if the screen was touched
     private bool gameOver = false; // bool variable that fobirds us to move when the bird is dead
 
+    [Header("Sound")]
+    [SerializeField] AudioClip deathSound;
+    [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.5f;
+    [SerializeField] AudioClip flyUpSound;
+    [SerializeField] [Range(0, 1)] float flyUpVolume = 0.5f;
+    [SerializeField] AudioClip wingsFlappSound;
+    [SerializeField] [Range(0, 1)] float wingsFlappVolume = 0.5f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +41,10 @@ public class BirdFly : MonoBehaviour
             manager.DisableStartUI();
         }
 
-        if (Input.GetMouseButtonDown(0)) // if screen is touched bird flies up
+        if (Input.GetMouseButtonDown(0) && !gameOver) // if screen is touched bird flies up
         {
             rigidbody2D.velocity = Vector2.up * velocity;
+            PlayFlyUpSound();
         }
 
         // if the bird has to fall dawn (game over), this option helps us not to change bird direction when it is falling
@@ -45,9 +55,28 @@ public class BirdFly : MonoBehaviour
         }
     }
 
+    private void PlayWingsFlappSound()
+    {
+        if (!wingsFlappSound) { return; }
+        AudioSource.PlayClipAtPoint(wingsFlappSound, Camera.main.transform.position, wingsFlappVolume);
+    }
+
+    private void PlayFlyUpSound()
+    {
+        if (!flyUpSound) { return; }
+        AudioSource.PlayClipAtPoint(flyUpSound, Camera.main.transform.position, flyUpVolume);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        PlayDeathSound();
         gameOver = true;
-        manager.GameOver(); // if bird touch the ground or pipes gameover
+        manager.GameOver(); // if bird touch the ground or pipes -  gameover
+    }
+
+    private void PlayDeathSound()
+    {
+        if (!deathSound) { return; }
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
     }
 }
