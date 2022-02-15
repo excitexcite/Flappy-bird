@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
         startGameComponents = GameObject.FindGameObjectsWithTag("GameStartElement"); // find all those UI objects
         DisableUIComponents(gameOverComponents); // disabling them on game start
         EnableUIComponents(startGameComponents); // enabling them on game start
-        text.SetActive(false);
+        DisableScore();
     }
 
     public void GameOver()
@@ -25,6 +25,15 @@ public class Manager : MonoBehaviour
         Time.timeScale = 0; // pausing the game
         EnableUIComponents(gameOverComponents); // activating all game over UI components
         DisableUIComponents(startGameComponents); // disabling all start components on game over
+        ScoreController scoreObject = FindObjectOfType<ScoreController>();
+        DisableScore();
+        scoreObject.RegisterBestScore();
+        scoreObject.ShowStats();
+    }
+
+    public void DisableScore()
+    {
+        text.SetActive(false);
     }
 
     public void EnableScore() 

@@ -10,7 +10,9 @@ public class AddScore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<ScoreText>().AddToScore();
+        ScoreController scoreObject = FindObjectOfType<ScoreController>();
+        scoreObject.AddToScore();
+        scoreObject.UpdateMainScoreText();
         AudioSource.PlayClipAtPoint(pointGainSound, Camera.main.transform.position, pointGainSoundVolume);
     }
 }
