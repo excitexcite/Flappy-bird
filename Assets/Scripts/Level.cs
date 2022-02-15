@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-
     public void ReloadLevel()
     {
         SceneManager.LoadScene(1); // reloading game scene

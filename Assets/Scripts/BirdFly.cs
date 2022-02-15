@@ -31,6 +31,17 @@ public class BirdFly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (transform.position.y >= 1.1f)
+        {
+            return;
+        }
+
+/*        if (level.IsPaused())
+        {
+            return;
+        }*/
+
         if(Input.GetMouseButtonDown(0) && !alreadyTouched) // if it's the screen touch
         {
             Debug.Log("Touched once"); 
@@ -39,6 +50,7 @@ public class BirdFly : MonoBehaviour
             FindObjectOfType<PipeSpawner>().StartSpawning(); // telling the spawner to star spawning pipes
             manager.EnableScore();
             manager.DisableStartUI();
+            manager.EnableGameElements();
         }
 
         if (Input.GetMouseButtonDown(0) && !gameOver) // if screen is touched bird flies up
@@ -63,6 +75,7 @@ public class BirdFly : MonoBehaviour
 
     private void PlayFlyUpSound()
     {
+        //if (!flyUpSound && !level.IsPaused()) { return; }
         if (!flyUpSound) { return; }
         AudioSource.PlayClipAtPoint(flyUpSound, Camera.main.transform.position, flyUpVolume);
     }

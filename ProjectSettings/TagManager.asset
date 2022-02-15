@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameOverElement
-  - Score
   - GameStartElement
+  - GameElement
   layers:
   - Default
   - TransparentFX

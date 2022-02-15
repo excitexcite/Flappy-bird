@@ -12,16 +12,4 @@ public class MedalShower : MonoBehaviour
     public void SetGoldMedal() { medalImage.sprite = goldMedalSprite; }
 
     public void SetSilverMedal() { medalImage.sprite = silverMedalSprite; }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -706,39 +706,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2004032319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6814824983886860926, guid: aa48e36cb2c3905428669128d28a104b,
+--- !u!114 &2004032321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2004032321, guid: aa48e36cb2c3905428669128d28a104b,
     type: 3}
   m_PrefabInstance: {fileID: 9206434572648814351}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2004032321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004032319}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 199df50dfc5efe74ab723ced54fd37d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goldMedalSprite: {fileID: -8013540443834916625, guid: d1aac14fda121914b89045c4bb5bca46,
-    type: 3}
-  silverMedalSprite: {fileID: 5725967632108582283, guid: d1aac14fda121914b89045c4bb5bca46,
-    type: 3}
-  medalImage: {fileID: 2004032322}
---- !u!114 &2004032322 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 304584188192549065, guid: aa48e36cb2c3905428669128d28a104b,
-    type: 3}
-  m_PrefabInstance: {fileID: 9206434572648814351}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004032319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2008092170
@@ -1019,14 +996,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 502306187, guid: aa48e36cb2c3905428669128d28a104b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 673707789, guid: aa48e36cb2c3905428669128d28a104b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9206434571552420786, guid: aa48e36cb2c3905428669128d28a104b,
         type: 3}
       propertyPath: m_LocalPosition.x
