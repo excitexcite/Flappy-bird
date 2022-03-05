@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Script to allow pipes to move. Places on pipes prefab.
+ */
 public class PipeMove : MonoBehaviour
 {
 
