@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Script to allow pipes to spawn. Places on pipeSpawner object
+ */
 public class PipeSpawner : MonoBehaviour
 {
 

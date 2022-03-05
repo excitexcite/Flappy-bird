@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Script to enable and disable pause in game. Placed on pause button.
+ */
 public class PauseController : MonoBehaviour
 {
     [SerializeField] Button pauseButton;

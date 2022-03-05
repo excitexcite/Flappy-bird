@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+ * Script to change scenes (screens)
+ */
+
 public class Level : MonoBehaviour
 {
     public void ReloadLevel()
@@ -13,6 +17,12 @@ public class Level : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+        ResumeGame();
+    }
+
+    public void LoadSettingsScene()
+    {
+        SceneManager.LoadScene(2);
         ResumeGame();
     }
 

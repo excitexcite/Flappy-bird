@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Script to controll game flow. Allow to enable and disable UI elements. 
+ */
 public class Manager : MonoBehaviour
 {
     private GameObject[] gameOverComponents; // array of objects that have to appear when the game is overed
@@ -29,7 +32,7 @@ public class Manager : MonoBehaviour
         EnableUIComponents(gameOverComponents); // activating all game over UI components
         DisableUIComponents(startGameComponents); // disabling all start components on game over
         DisableUIComponents(gameComponents); // disabling all game components on game over
-        ScoreController scoreObject = FindObjectOfType<ScoreController>();
+        ScoreController scoreObject = FindObjectOfType<ScoreController>(); 
         DisableScore();
         scoreObject.RegisterBestScore();
         scoreObject.ShowStats();
@@ -69,11 +72,5 @@ public class Manager : MonoBehaviour
         {
             obj.SetActive(true);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
